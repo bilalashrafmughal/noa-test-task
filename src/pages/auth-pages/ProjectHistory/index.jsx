@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Layout from "../../../layout";
-import { projectHistoryData } from "../../../utils/projectHistoryData";
+import Layout from "@/layout";
+import { projectHistoryData } from "@/utils/projectHistoryData";
 import { HiArrowDownTray, HiMagnifyingGlass, HiEye } from "react-icons/hi2";
 
 const ProjectHistory = () => {
@@ -38,7 +38,7 @@ const ProjectHistory = () => {
         <div className="bg-white shadow rounded-lg p-6">
           <div className="md:flex md:items-center md:justify-between">
             <div className="flex-1 min-w-0">
-              <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">
+              <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl">
                 Project History
               </h2>
               <p className="mt-1 text-sm text-gray-500">

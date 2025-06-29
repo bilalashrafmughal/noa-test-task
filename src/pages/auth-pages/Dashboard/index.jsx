@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../../../layout";
+import Layout from "@/layout";
 import { HiArrowDownTray } from "react-icons/hi2";
 
 const Dashboard = () => {

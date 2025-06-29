@@ -24,21 +24,6 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
       path: "/project-history",
       icon: <HiOutlineChartBarSquare className="w-5 h-5" />,
     },
-    {
-      name: "Users",
-      path: "/users",
-      icon: <HiOutlineUsers className="w-5 h-5" />,
-    },
-    {
-      name: "Settings",
-      path: "/settings",
-      icon: <HiOutlineCog6Tooth className="w-5 h-5" />,
-    },
-    {
-      name: "Profile",
-      path: "/profile",
-      icon: <HiOutlineUser className="w-5 h-5" />,
-    },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -60,7 +45,14 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
         }`}
       >
         <div className="flex items-center justify-center h-16 px-4 bg-gradient-to-r from-blue-600 to-purple-600">
-          <h2 className="text-xl font-bold text-white">Noa Dashboard</h2>
+          <div className="flex items-center space-x-3">
+            <span className=" bg-opacity-20 rounded-xl p-2">
+              <HiOutlineRectangleGroup className="w-8 h-8 text-white drop-shadow" />
+            </span>
+            <h2 className="text-lg font-bold text-white tracking-wide">
+              NOA Dashboard
+            </h2>
+          </div>
         </div>
 
         <nav className="mt-8">

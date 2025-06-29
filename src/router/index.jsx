@@ -2,6 +2,7 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LoginPage from "../pages/Login";
 import Dashboard from "../pages/auth-pages/Dashboard";
+import ProjectHistory from "../pages/auth-pages/ProjectHistory";
 
 const router = createBrowserRouter([
   {
@@ -17,8 +18,8 @@ const router = createBrowserRouter([
     element: <Dashboard />,
   },
   {
-    path: "/analytics",
-    element: <Dashboard />, // Placeholder for now
+    path: "/project-history",
+    element: <ProjectHistory />,
   },
   {
     path: "/users",

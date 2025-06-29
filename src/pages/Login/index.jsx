@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import HookTextField from "../../shared-components/HookTextField";
+import HookTextField from "@/shared-components/HookTextField";
 import { HiLockClosed } from "react-icons/hi2";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 const schema = yup.object().shape({
   email: yup.string().email("Invalid email").required("Email is required"),
@@ -15,6 +16,7 @@ const schema = yup.object().shape({
 });
 
 const LoginPage = () => {
+  const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
   const {
     control,
@@ -36,6 +38,7 @@ const LoginPage = () => {
       console.log("Login data:", data);
       await new Promise((resolve) => setTimeout(resolve, 1000));
       // Handle successful login here
+      navigate("/dashboard");
     } catch (error) {
       console.error("Login error:", error);
     } finally {
